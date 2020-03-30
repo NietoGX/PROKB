@@ -6,6 +6,7 @@ namespace Prokb.Data.Models
 
     public class FichaNoConformidadMedioAmbiente : FichaNoConformidad
     {
+        
         public EstadoEME Estado { get; set; }
 
         public string FichaAnalisisId { get; set; }

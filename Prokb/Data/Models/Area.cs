@@ -3,7 +3,7 @@ using System;
 
 public class Area
 {
-    
+    public int Id { get;set; }
     public string Nombre { get; set; }
     public string EmpresaId { get; set; }
     public Empresa Empresa { get; set; }

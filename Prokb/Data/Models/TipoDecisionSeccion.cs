@@ -2,7 +2,7 @@
 
 public class TipoDecisionSeccion
 {
-    public int DecisionId { get; set; }
+    public int Id { get; set; }
     public Decision Decision { get; set; }
     public int SeccionId { get; set; }
     public Seccion Seccion { get; set; }

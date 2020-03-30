@@ -7,6 +7,7 @@ namespace Prokb.Data.Models
 {
     public class Documento
     {
+        public int Id { get; set; }
         public string Descripcion { get; set; }
     }
 }

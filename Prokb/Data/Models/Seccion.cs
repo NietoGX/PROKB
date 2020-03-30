@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 public class Seccion 
-{ 
+{
+    public int Id { get; set; }
     public string NombreSeccion { get; set; }
     public int AreaId { get; set; }
     public Area Area { get; set; }

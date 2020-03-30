@@ -2,6 +2,7 @@
 
 public class EmpresaAreaSeccionUsuario
 {
+    public int Id { get; set; }
     public string EmpresaId { get; set; }
     public Empresa Empresa { get; set; }
     public int AreaId { get; set; }

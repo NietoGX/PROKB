@@ -8,7 +8,7 @@ namespace Prokb.Data.Models
 
     public class FichaNoConformidadServicio : FichaNoConformidad
     {
-
+        
         public EstadoServicio Estado { get; set; }
         public string FichaAnalisisId { get; set; }
         public FichaAnalisis FichaAnalisis { get; set; }

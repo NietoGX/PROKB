@@ -7,7 +7,7 @@ namespace Prokb.Data.Models.TiposFicha
 {
     public class FichaArticulo : FichaNoConformidad
     {
-
+        
         public int NumAlbaran { get; set; }
 
         public DateTime FechaAlbaran { get; set; }

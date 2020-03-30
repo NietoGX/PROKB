@@ -8,8 +8,6 @@ C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.Assem
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.RazorTargetAssemblyInfo.cache
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\staticwebassets\Prokb.StaticWebAssets.Manifest.cache
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\staticwebassets\Prokb.StaticWebAssets.xml
-C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.csproj.CoreCompileInputs.cache
-C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Prokb.deps.json
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Prokb.runtimeconfig.json
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Prokb.runtimeconfig.dev.json
@@ -49,3 +47,7 @@ C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.cspro
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.dll
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.pdb
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.genruntimeconfig.cache
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.csproj.CoreCompileInputs.cache
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\AutoMapper.dll
