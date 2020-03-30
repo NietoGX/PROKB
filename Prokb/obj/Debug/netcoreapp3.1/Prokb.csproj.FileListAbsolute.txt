@@ -48,6 +48,6 @@ C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.dll
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.pdb
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.genruntimeconfig.cache
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.csproj.CoreCompileInputs.cache
-C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\DavidNieto\source\repos\PROKB\Prokb\obj\Debug\netcoreapp3.1\Prokb.csproj.CoreCompileInputs.cache
+C:\Users\DavidNieto\source\repos\PROKB\Prokb\obj\Debug\netcoreapp3.1\Prokb.MvcApplicationPartsAssemblyInfo.cache
