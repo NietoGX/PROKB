@@ -3,7 +3,7 @@
 public class TipoDecisionSeccion
 {
     public int Id { get; set; }
-    public Decision Decision { get; set; }
+    public virtual Decision Decision { get; set; }
     public int SeccionId { get; set; }
-    public Seccion Seccion { get; set; }
+    public virtual Seccion Seccion { get; set; }
 }

@@ -8,11 +8,11 @@ namespace Prokb.Data.Models.TiposFicha
         
         public DateTime FechaAnalisis { get; set; }
         public int ResponsableAnalisisId { get; set; }
-        public EmpresaAreaSeccionUsuario ResponsableAnalisis { get; set; }
+        public virtual EmpresaAreaSeccionUsuario ResponsableAnalisis { get; set; }
         public int PropuestaId { get; set; }
-        public Decision Propuesta{get;set;}//Decision= propuesta
+        public virtual Decision Propuesta {get;set;}//Decision= propuesta
         public int DecisionId { get; set; }
-        public Decision Decision { get; set; }
+        public virtual Decision Decision { get; set; }
         public string Descripcion { get; set; }
 
         

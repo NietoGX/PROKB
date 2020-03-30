@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cldSdNp83p00Rp6yaThvXGGeHM+mkOwjLNTowABUiDpVX83GmhEBaX6NJX/iHnJ9LMOH3UkDg8b9gywKsdpV5A==",
+  "dgSpecHash": "60gKnKP9q0vSvzHceoqqYD4mco32MkOaARoNozfRbroPT4uMTubyiVN++jLf2MHnG5TkDDVanU+HC5C7dp9bgQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DavidNieto\\source\\repos\\PROKB\\Prokb\\Prokb.csproj",
+  "projectFilePath": "C:\\Users\\DavidNieto\\source\\repos\\Prokb\\Prokb\\Prokb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DavidNieto\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\DavidNieto\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",

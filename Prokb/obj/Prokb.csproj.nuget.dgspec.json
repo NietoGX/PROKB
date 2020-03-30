@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DavidNieto\\source\\repos\\PROKB\\Prokb\\Prokb.csproj": {}
+    "C:\\Users\\DavidNieto\\source\\repos\\Prokb\\Prokb\\Prokb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DavidNieto\\source\\repos\\PROKB\\Prokb\\Prokb.csproj": {
+    "C:\\Users\\DavidNieto\\source\\repos\\Prokb\\Prokb\\Prokb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DavidNieto\\source\\repos\\PROKB\\Prokb\\Prokb.csproj",
+        "projectUniqueName": "C:\\Users\\DavidNieto\\source\\repos\\Prokb\\Prokb\\Prokb.csproj",
         "projectName": "Prokb",
-        "projectPath": "C:\\Users\\DavidNieto\\source\\repos\\PROKB\\Prokb\\Prokb.csproj",
+        "projectPath": "C:\\Users\\DavidNieto\\source\\repos\\Prokb\\Prokb\\Prokb.csproj",
         "packagesPath": "C:\\Users\\DavidNieto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DavidNieto\\source\\repos\\PROKB\\Prokb\\obj\\",
+        "outputPath": "C:\\Users\\DavidNieto\\source\\repos\\Prokb\\Prokb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DavidNieto\\AppData\\Roaming\\NuGet\\NuGet.Config",

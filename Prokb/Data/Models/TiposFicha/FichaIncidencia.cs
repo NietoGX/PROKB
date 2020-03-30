@@ -14,9 +14,9 @@ namespace Prokb.Data.Models.TiposFicha
         public bool AfectaProduccion { get; set; }
         public bool EsPropuesta { get; set; }//Si no es propuesta es decision
         public int DecisionIncidenciaId { get; set; }
-        public TipoDecisionSeccion DecisionIncidencia { get; set; }
+        public virtual TipoDecisionSeccion DecisionIncidencia { get; set; }
         public int PropuestaIncidenciaId { get; set; }
-        public TipoDecisionSeccion PropuestaIncidencia { get; set; }
+        public virtual TipoDecisionSeccion PropuestaIncidencia { get; set; }
         
     }
 }

@@ -10,18 +10,18 @@ namespace Prokb.Data.Models
         
         public EstadoProductoAcabado Estado { get; set; }
         public string FichaCalidadId { get; set; }
-        public FichaCalidad FichaCalidad { get; set; }
+        public virtual FichaCalidad FichaCalidad { get; set; }
         
         public string FichaPlanificacionId { get; set; }
-        public FichaPlanificacion FichaPlanificacion { get; set; }
+        public virtual FichaPlanificacion FichaPlanificacion { get; set; }
         
         public string FichaLogisticaId { get; set; }
-        public FichaLogistica FichaLogistica { get; set; }
+        public virtual FichaLogistica FichaLogistica { get; set; }
         
         public string FichaArticuloId { get; set; }
-        public FichaArticulo FichaArticulo { get; set; }
+        public virtual FichaArticulo FichaArticulo { get; set; }
         
         public string FichaIncidenciaId { get; set; }
-        public FichaIncidencia FichaIncidencia { get; set; }
+        public virtual FichaIncidencia FichaIncidencia { get; set; }
     }
 }
