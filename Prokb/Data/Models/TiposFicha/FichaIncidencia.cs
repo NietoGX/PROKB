@@ -9,7 +9,8 @@ namespace Prokb.Data.Models.TiposFicha
     {
 
         public bool EsGrave { get; set; }
-        public int TipoIncidenciaId{get;set; }
+        public virtual ICollection<TipoIncidenciaSeccion> TiposIncidencia{get;set; }
+        //public List<int> TiposIncidenciaId { get; set; }
         public string DescripcionIncidencia { get; set; }
         public bool AfectaProduccion { get; set; }
         public bool EsPropuesta { get; set; }//Si no es propuesta es decision

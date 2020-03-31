@@ -16,7 +16,7 @@ namespace Prokb.Data.Models
         public virtual FichaCompras FichaCompras { get; set; }
         public string FichaEjecucionId { get; set; }
         public virtual FichaEjecucion FichaEjecucion { get; set; }
-        public string FichaArticuloEFIMEDID { get; set; }
+        public string FichaArticuloEFIMEDId { get; set; }
         public virtual FichaArticuloEFIMED FichaArticuloEFIMED {get;set;}
         public string FichaIncidenciaId { get; set; }
         public virtual FichaIncidencia FichaIncidencia { get; set; }

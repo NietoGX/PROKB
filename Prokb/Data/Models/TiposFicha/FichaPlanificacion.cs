@@ -9,7 +9,7 @@ namespace Prokb.Data.Models.TiposFicha
 
         public DateTime FechaPlanificacion { get; set; }
         public int ResponsablePlanificacionId { get; set; }
-        public virtual Usuario ResponsablePlanificacion { get; set; }
+        public virtual EmpresaAreaSeccionUsuario ResponsablePlanificacion { get; set; }
         public int DecisionPlanificacionId { get; set; }
         public virtual TipoDecisionSeccion DecisionPlanificacion { get; set; }
         public int CantidadDevuelta { get; set; }

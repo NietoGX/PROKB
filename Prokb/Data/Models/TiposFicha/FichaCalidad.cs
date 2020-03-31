@@ -8,8 +8,8 @@ namespace Prokb.Data.Models.TiposFicha
     {
 
         public DateTime FechaCalidad { get; set; }
-        public string ResponsableCalidadId { get; set; }
-        public virtual EmpresaAreaSeccionUsuario ResponsableCalidad { get; set; }
+        public int ResponsableCalidadId { get; set; }
+        public  EmpresaAreaSeccionUsuario ResponsableCalidad { get; set; }
         public int MotivoId { get; set; }
         public virtual Motivo Motivo { get; set; }
         public int DecisionCalidadId { get; set; }

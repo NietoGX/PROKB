@@ -1,4 +1,6 @@
 ﻿using Prokb.Data.Models;
+using Prokb.Data.Models.TiposFicha;
+using System.Collections.Generic;
 
 public class EmpresaAreaSeccionUsuario
 {
@@ -11,5 +13,7 @@ public class EmpresaAreaSeccionUsuario
     public virtual Seccion Seccion {get;set;}
     public string UsuarioId { get; set; }
     public virtual Usuario Usuario { get; set; }
+
+    
 
 }

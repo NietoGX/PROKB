@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Prokb.Data.Models;
 using Prokb.Data.Models.TiposFicha;
+using System.Linq;
 
 namespace Prokb.Data
 {
@@ -14,21 +15,21 @@ namespace Prokb.Data
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<FichaNoConformidad>().ToTable("FichasNoConformidad");
-            modelBuilder.Entity<FichaNoConformidadEficienciaEnergetica>().ToTable("FichaNoConformidadEficienciaEnergetica");
-            modelBuilder.Entity<FichaNoConformidadMedioAmbiente>().ToTable("FichasNoConformidadMedioAmbiente");
-            modelBuilder.Entity<FichaNoConformidadServicio>().ToTable("FichasNoConformidadServicioa");
-            modelBuilder.Entity<FichaNoConformidadProductoAcabado>().ToTable("FichasNoConformidadProductoAcabado");
-            modelBuilder.Entity<FichaAnalisis>().ToTable("FichasAnalisis");
-            modelBuilder.Entity<FichaArticulo>().ToTable("FichasArticulo");
-            modelBuilder.Entity<FichaArticuloEFIMED>().ToTable("FichasArticuloEFIMED");
-            modelBuilder.Entity<FichaCalidad>().ToTable("FichasCalidad");
-            modelBuilder.Entity<FichaCompras>().ToTable("FichasCompras");
-            modelBuilder.Entity<FichaEjecucion>().ToTable("FichasEjecucion");
-            modelBuilder.Entity<FichaIncidencia>().ToTable("FichasIncidencia");
-            modelBuilder.Entity<FichaLogistica>().ToTable("FichasLogistica");
+            //modelBuilder.Entity<FichaNoConformidad>().ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaNoConformidadEficienciaEnergetica>().ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaNoConformidadMedioAmbiente>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaNoConformidadServicio>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaNoConformidadProductoAcabado>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaAnalisis>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaArticulo>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaArticuloEFIMED>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaCalidad>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaCompras>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaEjecucion>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaIncidencia>();//.ToTable("FichasNoConformidad");
+            modelBuilder.Entity<FichaLogistica>();//.ToTable("FichasNoConformidad");
 
-            modelBuilder.Entity<FichaPlanificacion>().ToTable("FichasPlanificacion");
+            modelBuilder.Entity<FichaPlanificacion>();//.ToTable("FichasNoConformidad");
             modelBuilder.Entity<Area>().ToTable("Areas");
             modelBuilder.Entity<Decision>().ToTable("Decisiones");
             modelBuilder.Entity<Documento>().ToTable("Documentos");
@@ -42,13 +43,17 @@ namespace Prokb.Data
             modelBuilder.Entity<TipoIncidenciaSeccion>().ToTable("TiposIncidenciaSeccion");
             modelBuilder.Entity<Usuario>().ToTable("Usuarios");
 
+            foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
 
 
         }
-        public DbSet<FichaNoConformidad> FichasNoConformidad { get; set; }
+        //public DbSet<FichaNoConformidad> FichasNoConformidad { get; set; }
         public DbSet<FichaNoConformidadEficienciaEnergetica> FichasNoConformidadEficienciaEnergetica { get; set; }
         public DbSet<FichaNoConformidadMedioAmbiente> FichasNoConformidadMedioAmbiente { get; set; }
-        public DbSet<FichaNoConformidadServicio> FichasNoConformidadServicioa { get; set; }
+        public DbSet<FichaNoConformidadServicio> FichasNoConformidadServicio { get; set; }
         public DbSet<FichaNoConformidadProductoAcabado> FichasNoConformidadProductoAcabado { get; set; }
         public DbSet<FichaAnalisis> FichasAnalisis { get; set; }
         public DbSet<FichaArticulo> FichasArticulo { get; set; }
