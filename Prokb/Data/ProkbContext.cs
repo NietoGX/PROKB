@@ -77,6 +77,7 @@ namespace Prokb.Data
         public DbSet<TipoDecisionSeccion> TiposDecisionSeccion { get; set; }
         public DbSet<TipoIncidenciaSeccion> TiposIncidenciaSeccion { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Articulo> Articulo { get; set; }
 
 
     }
