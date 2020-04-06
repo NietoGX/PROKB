@@ -3,11 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Prokb.Data.DataDTO.TiposFicha
 {
-    class FichaComprasDTO
+    class FichaComprasDTO : FichaNoConformicadDTO
     {
 
-        public int Id { get; set; }
-        public string FichaReferencia { get; set; }
 
         public DateTime FechaCompras { get; set; }
 

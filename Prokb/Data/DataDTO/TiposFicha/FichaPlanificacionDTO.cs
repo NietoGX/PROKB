@@ -4,11 +4,8 @@ using System.ComponentModel.DataAnnotations;
 namespace Prokb.Data.DataDTO.TiposFicha
 {
 
-    class FichaPlanificacionDTO
+    class FichaPlanificacionDTO : FichaNoConformicadDTO
     {
-
-        public int Id { get; set; }
-        public string FichaReferencia { get; set; }
 
         public DateTime FechaPlanificacion { get; set; }
 
@@ -22,5 +19,6 @@ namespace Prokb.Data.DataDTO.TiposFicha
         public string DescripcionDecision { get; set; }
 
         public bool Finalizada { get; set; }//define si esta rellenada o no
+
     }
 }

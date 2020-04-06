@@ -5,11 +5,9 @@ using System.Text;
 
 namespace Prokb.Data.DataDTO.TiposFicha
 {
-    class FichaIncidenciaDTO
+    class FichaIncidenciaDTO : FichaNoConformicadDTO
     {
-        [Key]
-        public int Id { get; set; }
-        public string FichaReferencia { get; set; }
+       
         public bool EsGrave { get; set; }
         public IncidenciaDTO TipoIncidencia { get; set; }
         public int TipoIncidenciaId{get;set; }

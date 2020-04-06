@@ -1,109 +1,98 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Security.Claims;
+using System.Text;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Prokb.Data;
+using Prokb.Data.DataDTO;
+using Prokb.Repositories;
+using Microsoft.AspNetCore.Authorization;
+
+using Microsoft.Extensions.Options;
+using System.Threading.Tasks;
 
 namespace Prokb.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AreasController : ControllerBase
+    public class AreasController : Controller
     {
-        private readonly ProkbContext _context;
+        private AreasRepository _repository;
 
-        public AreasController(ProkbContext context)
+        public AreasController(AreasRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/Areas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Area>>> GetAreas()
+        public ActionResult<List<AreaDTO>> GetAreas()
         {
-            return await _context.Areas.ToListAsync();
+            return Ok(_repository.GetAll());
         }
 
         // GET: api/Areas/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Area>> GetArea(int id)
-        {
-            var area = await _context.Areas.FindAsync(id);
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Area>> GetArea(int id)
+        //{
 
-            if (area == null)
-            {
-                return NotFound();
-            }
+        //}
 
-            return area;
-        }
+
 
         // PUT: api/Areas/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutArea(int id, Area area)
-        {
-            if (id != area.Id)
-            {
-                return BadRequest();
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutArea(int id, Area area)
+        //{
+        //    if (id != area.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(area).State = EntityState.Modified;
+        //    _context.Entry(area).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AreaExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!AreaExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/Areas
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Area>> PostArea(Area area)
+        public ActionResult<AreaDTO> PostArea(AreaDTO area)
         {
-            _context.Areas.Add(area);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetArea", new { id = area.Id }, area);
+            return Ok(_repository.Create(area));
         }
 
         // DELETE: api/Areas/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Area>> DeleteArea(int id)
-        {
-            var area = await _context.Areas.FindAsync(id);
-            if (area == null)
-            {
-                return NotFound();
-            }
+        //[HttpDelete("{id}")]
+        //public  Task<ActionResult<AreaDTO>> DeleteArea(int id)
+        //{
+        //    return Ok(_repository.Delete(id));
+        //}
 
-            _context.Areas.Remove(area);
-            await _context.SaveChangesAsync();
-
-            return area;
-        }
-
-        private bool AreaExists(int id)
-        {
-            return _context.Areas.Any(e => e.Id == id);
-        }
+        //private bool AreaExists(int id)
+        //{
+        //    return _context.Areas.Any(e => e.Id == id);
+        //}
     }
 }

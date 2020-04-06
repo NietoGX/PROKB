@@ -3,9 +3,8 @@ namespace Prokb.Data.DataDTO
 {
     public class TipoDecisionSeccionDTO
     {
-        [Key]
-        public int IdDecision { get; set; }
-        public int IdSeccion { get; set; }
+        public int DecisionId { get; set; }
+        public int SeccionId { get; set; }
         public DecisionDTO Decision { get; set; }
         public SeccionDTO Seccion { get; set; }
     }

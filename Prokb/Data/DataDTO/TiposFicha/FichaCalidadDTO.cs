@@ -3,13 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Prokb.Data.DataDTO.TiposFicha
 {
-    class FichaCalidadDTO
+    class FichaCalidadDTO : FichaNoConformicadDTO
     {
-        [Key]
-        public int Id { get; set; }
-        public string FichaReferencia { get; set; }
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        
+       
+        
         public DateTime FechaCalidad { get; set; }
         public UsuarioDTO ResponsableCalidad { get; set; }
         public string ResponsableCalidadId { get; set; }

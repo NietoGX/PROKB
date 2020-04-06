@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Prokb.Data;
+using Prokb.Data.DataDTO;
 using Prokb.Data.Models;
+using Prokb.Repositories;
 
 namespace Prokb.Controllers
 {
@@ -15,6 +17,13 @@ namespace Prokb.Controllers
     public class EmpresasController : ControllerBase
     {
         private readonly ProkbContext _context;
+        private EmpresasRepository _repository;
+
+        public EmpresasController(EmpresasRepository repository)
+        {
+            _repository = repository;
+        }
+
 
         public EmpresasController(ProkbContext context)
         {
@@ -78,12 +87,12 @@ namespace Prokb.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Empresa>> PostEmpresa(Empresa empresa)
+        public ActionResult<EmpresaDTO> Create([FromBody]EmpresaDTO dto)
         {
-            _context.Empresas.Add(empresa);
-            await _context.SaveChangesAsync();
+            //_context.Empresas.Add(empresa);
+            //await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetEmpresa", new { id = empresa.Id }, empresa);
+            return Ok(_repository.Create(dto));
         }
 
         // DELETE: api/Empresas/5

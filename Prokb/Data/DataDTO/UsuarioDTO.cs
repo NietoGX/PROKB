@@ -6,8 +6,7 @@ namespace Prokb.Data.DataDTO
 {
     public class UsuarioDTO
     {
-        //[Key]
-        //public int Id { get; set; }
+        
         public string Nombre { get; set; }
         
         public string Email { get; set; }
@@ -16,7 +15,7 @@ namespace Prokb.Data.DataDTO
 
         public DateTime FechaModificacion { get; set; }
 
-        public ICollection<SeccionDTO> Secciones;
+
 
     }
 }

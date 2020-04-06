@@ -12,14 +12,9 @@ namespace Prokb.Data.DataDTO.TiposFicha
 
         public string EmisorId { get; set; }
 
-        public int ProveedorId { get; set; }
-
-        public int ArticuloId { get; set; }
-
         public DateTime FechaCreacion { get; set; }
 
         public DateTime FechaModificacion { get; set; }
-        public int DecisionId { get; set; }
-        public List<int> IncidenciasId { get; set; }
+        
     }
 }

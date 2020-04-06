@@ -5,12 +5,11 @@ using System.Text;
 
 namespace Prokb.Data.DataDTO.TiposFicha
 {
-    class FichaArticuloEfiMedDTO
+    class FichaArticuloEfiMedDTO : FichaNoConformicadDTO
     {
-        [Key]
-        public int Id { get; set; }
-        public string FichaReferencia { get; set; }
-        //public Ubicacion?
+        
+      
+        public string Ubicacion { get; set; }
         public string Notas { get; set; }
         public int ArticuloId { get; set; }
         public ArticuloDTO Articulo { get; set; }

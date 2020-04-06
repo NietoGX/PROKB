@@ -1,11 +1,12 @@
 ﻿
+using Prokb.Data.Models.TiposFicha;
 using System;
 using System.ComponentModel.DataAnnotations;
 
 
 namespace Prokb.Data.DataDTO
 {
-    public class AreaDTO
+    public class AreaDTO 
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
