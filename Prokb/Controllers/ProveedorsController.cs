@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Prokb.Data;
+using Prokb.Data.DataDTO;
+using Prokb.Repositories;
 
 namespace Prokb.Controllers
 {
@@ -13,97 +15,75 @@ namespace Prokb.Controllers
     [ApiController]
     public class ProveedorsController : ControllerBase
     {
-        private readonly ProkbContext _context;
+        private ProveedoresRepository _repository;
 
-        public ProveedorsController(ProkbContext context)
+        public ProveedorsController(ProveedoresRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/Proveedors
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Proveedor>>> GetProveedores()
+        public ActionResult<IEnumerable<ProveedorDTO>> GetProveedores()
         {
-            return await _context.Proveedores.ToListAsync();
+            return Ok(_repository.GetAll());
         }
 
         // GET: api/Proveedors/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Proveedor>> GetProveedor(int id)
-        {
-            var proveedor = await _context.Proveedores.FindAsync(id);
-
-            if (proveedor == null)
-            {
-                return NotFound();
-            }
-
-            return proveedor;
-        }
+        //[HttpGet("{id}")]
+        //public ActionResult<Proveedor> GetProveedor(int id)
+        //{
+        //    return Ok(_repository.Get(id));
+        //}
 
         // PUT: api/Proveedors/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutProveedor(int id, Proveedor proveedor)
-        {
-            if (id != proveedor.Id)
-            {
-                return BadRequest();
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutProveedor(int id, Proveedor proveedor)
+        //{
+        //    if (id != proveedor.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(proveedor).State = EntityState.Modified;
+        //    _context.Entry(proveedor).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProveedorExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!ProveedorExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/Proveedors
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Proveedor>> PostProveedor(Proveedor proveedor)
+        public ActionResult<ProveedorDTO> PostProveedor(ProveedorDTO proveedor)
         {
-            _context.Proveedores.Add(proveedor);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetProveedor", new { id = proveedor.Id }, proveedor);
+            return Ok(_repository.Create(proveedor));
         }
 
         // DELETE: api/Proveedors/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Proveedor>> DeleteProveedor(int id)
+        public ActionResult<Proveedor> DeleteProveedor(int id)
         {
-            var proveedor = await _context.Proveedores.FindAsync(id);
-            if (proveedor == null)
-            {
-                return NotFound();
-            }
-
-            _context.Proveedores.Remove(proveedor);
-            await _context.SaveChangesAsync();
-
-            return proveedor;
+            return Ok(_repository.Delete(id));
         }
 
-        private bool ProveedorExists(int id)
-        {
-            return _context.Proveedores.Any(e => e.Id == id);
-        }
+        
     }
 }

@@ -15,7 +15,7 @@ namespace Prokb.Repositories
         private ProkbContext _context;
         private readonly IMapper _mapper;
 
-        public DocumentoDTO Create(EmpresaDTO dto)
+        public DocumentoDTO Create(DocumentoDTO dto)
         {
             // Mapeamos el dto a la entidad, la añadimos al contexto, guardamos y devolvemos el dto mapeado
             var model = _mapper.Map<Documento>(dto);

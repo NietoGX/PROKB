@@ -142,5 +142,17 @@ C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\ru\Microsof
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Barcode.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Chart.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Diagram.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Grid.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Host.WinBase.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Host.WinForm.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Host.Wpf.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Presentation.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Schedule.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.Text.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.WinFormControls.dll
+C:\Users\DavidNieto\source\repos\Prokb\Prokb\bin\Debug\netcoreapp3.1\Nevron.Nov.WpfControls.dll
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.csproj.CoreCompileInputs.cache
 C:\Users\DavidNieto\source\repos\Prokb\Prokb\obj\Debug\netcoreapp3.1\Prokb.MvcApplicationPartsAssemblyInfo.cache

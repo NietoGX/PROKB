@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Prokb.Data.DataDTO.DecisionDTO" Collapsed="true">
+    <Position X="69" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DataDTO\DecisionDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.EmpresaDTO" Collapsed="true">
+    <Position X="74.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DataDTO\EmpresaDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.IncidenciaDTO" Collapsed="true">
+    <Position X="67.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAABAAAAAAAAAACAAACAAAA=</HashCode>
+      <FileName>Data\DataDTO\IncidenciaDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.ProveedorDTO" Collapsed="true">
+    <Position X="74.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAACAAAAAABAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Data\DataDTO\ProveedorDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.SeccionDTO" Collapsed="true">
+    <Position X="67.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAIAAACACAAAA=</HashCode>
+      <FileName>Data\DataDTO\SeccionDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.Documento" Collapsed="true">
+    <Position X="74.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Models\Documento.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.AreasController" Collapsed="true">
+    <Position X="69" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>Controllers\AreasController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.ArticulosController" Collapsed="true">
+    <Position X="76" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAQABAAAAEAEAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Controllers\ArticulosController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.DecisionsController" Collapsed="true">
+    <Position X="72.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEABAAAAgAAAAAACAAAAAQAAAAgAAQAAAA=</HashCode>
+      <FileName>Controllers\DecisionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.DocumentosController" Collapsed="true">
+    <Position X="77.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAgAAAgAgBAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Controllers\DocumentosController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.EmpresaAreaSeccionUsuariosController" Collapsed="true">
+    <Position X="72.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAABAAAAAAABAAQAAAACgAAAgAAAAAAAAA=</HashCode>
+      <FileName>Controllers\EmpresaAreaSeccionUsuariosController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.EmpresasController" Collapsed="true">
+    <Position X="76" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABABAEAIAAAEAQAAAgAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\EmpresasController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.IncidenciasController" Collapsed="true">
+    <Position X="69" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAACABAAAUAAAAAAAAAAAAAIAAEAAAAAAAAA=</HashCode>
+      <FileName>Controllers\IncidenciasController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.MotivoesController" Collapsed="true">
+    <Position X="77.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACBBAAAAAAAgAAAAGAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Controllers\MotivoesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.ProveedorsController" Collapsed="true">
+    <Position X="77.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAMAABAAAAAAAEEAAAAEAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Controllers\ProveedorsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.SeccionsController" Collapsed="true">
+    <Position X="70.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABIAAAAAAAAAAhAAAgAABEAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\SeccionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.TipoDecisionSeccionsController" Collapsed="true">
+    <Position X="77.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgEAAABAAAAAABAAAgAAAAAAAAAAAAQAAAQAA=</HashCode>
+      <FileName>Controllers\TipoDecisionSeccionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.TipoIncidenciaSeccionsController" Collapsed="true">
+    <Position X="69" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAIAABBAAAAEAAAAAAAAAAAAAAAAAAAACAEAA=</HashCode>
+      <FileName>Controllers\TipoIncidenciaSeccionsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.UsuariosController" Collapsed="true">
+    <Position X="74.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIBABAAAEAAAAAAAAAAAAAAEAAQAAgAAA=</HashCode>
+      <FileName>Controllers\UsuariosController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Controllers.WeatherForecastController" Collapsed="true">
+    <Position X="77.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEBAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\WeatherForecastController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.EficienciaEnergetica.FichaNoConformidadEficienciaEnergeticaDTO" Collapsed="true">
+    <Position X="37.75" Y="4.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAAYAAAAg=</HashCode>
+      <FileName>Data\DataDTO\EficienciaEnergetica\FichaNoConformidadEficienciaEnergeticaDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.MedioAmbiente.FichaNoConformidadMedioAmbienteDTO" Collapsed="true">
+    <Position X="53.25" Y="4.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAYAAAAg=</HashCode>
+      <FileName>Data\DataDTO\MedioAmbiente\FichaNoConformidadMedioAmbienteDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.MedioAmbiente.FichaNoConformidadProductoAcabadoDTO" Collapsed="true">
+    <Position X="46.75" Y="4.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAQAAAAAAAAAAAgAACAAACAAAAAAAAg=</HashCode>
+      <FileName>Data\DataDTO\ProductoAcabado\FichaNoConformidadProductoAcabadoDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.Servicio.FichaNoConformidadServicioDTO" Collapsed="true">
+    <Position X="59.5" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AICAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAQABAAg=</HashCode>
+      <FileName>Data\DataDTO\Servicio\FichaNoConformidadServicioDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FichaAnalisisDTO" Collapsed="true">
+    <Position X="43" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAADAAAEAAAAAAAQEAAAAAA=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FichaAnalisisDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FIchaArticuloDTO" Collapsed="true">
+    <Position X="30" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAgAAEAAAAACAgAAAgAABAAAQCAAACAAAAAIAIAA=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FIchaArticuloDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FichaArticuloEfiMedDTO" Collapsed="true">
+    <Position X="32.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAEAAgAAEAAAAAAAAAAAAIABAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FichaArticuloEfiMedDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FichaCalidadDTO" Collapsed="true">
+    <Position X="35.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAEAAACAAAAQAAAgAASAAAAAQgAQAAAA=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FichaCalidadDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FichaComprasDTO" Collapsed="true">
+    <Position X="41.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAKAAAAAAADAAAAAAAAAAAQAAQAAAA=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FichaComprasDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FichaEjecucionDTO" Collapsed="true">
+    <Position X="44.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAABIAAAAAAAAgACAAQAAAA=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FichaEjecucionDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FichaIncidenciaDTO" Collapsed="true">
+    <Position X="50.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAEAAAAAAACIAAAABAAAAAQAQAAAAAQABEAAAA=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FichaIncidenciaDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FichaLogisticaDTO" Collapsed="true">
+    <Position X="57" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAEQAAAAAAAAAAAQgAAAAQAAQAAAA=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FichaLogisticaDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FichaNoConformicadDTO" Collapsed="true">
+    <Position X="45" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAAAAAAAAIBAAAAAAACAAAA=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FichaNoConformicadDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TiposFicha.FichaPlanificacionDTO" Collapsed="true">
+    <Position X="62.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABAEAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAQAAQACgI=</HashCode>
+      <FileName>Data\DataDTO\TiposFicha\FichaPlanificacionDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.AreaDTO" Collapsed="true">
+    <Position X="67.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAgBAAAAAAAAACAAAAAAGAAAA=</HashCode>
+      <FileName>Data\DataDTO\AreaDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.ArticuloDTO" Collapsed="true">
+    <Position X="74.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAACAAAAAABAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Data\DataDTO\ArticuloDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.DocumentoDTO" Collapsed="true">
+    <Position X="76" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DataDTO\DocumentoDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.EmpresaAreaSeccionUsuarioDTO" Collapsed="true">
+    <Position X="70.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAIgAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Data\DataDTO\EmpresaAreaSeccionUsuarioDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.MotivoDTO" Collapsed="true">
+    <Position X="76" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DataDTO\MotivoDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TipoDecisionSeccionDTO" Collapsed="true">
+    <Position X="76" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAgAAQAAAAAQAAAAAAA=</HashCode>
+      <FileName>Data\DataDTO\TipoDecisionSeccionDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.TipoIncidenciaSeccionDTO" Collapsed="true">
+    <Position X="67.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACEAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DataDTO\TipoIncidenciaSeccionDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DataDTO.UsuarioDTO" Collapsed="true">
+    <Position X="72.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAAAAAAAAAAgAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Data\DataDTO\UsuarioDTO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.FichaNoConformidadEficienciaEnergetica" Collapsed="true">
+    <Position X="49.75" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAQAAAAEAgAAAAAAAAIAAQAAAAAAAAQAYAAAAg=</HashCode>
+      <FileName>Data\Models\EficienciaEnergetica\FichaNoConformidadEficienciaEnergetica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.FichaNoConformidadMedioAmbiente" Collapsed="true">
+    <Position X="56" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAQAAAAEAgAAAAAAAAAAAQAAAAAAAAQAYAAAAg=</HashCode>
+      <FileName>Data\Models\MedioAmbiente\FichaNoConformidadMedioAmbiente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.FichaNoConformidadProductoAcabado" Collapsed="true">
+    <Position X="27.25" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAGAAAAAAAAAAAQAAIAAAAAABAgAACIAACAQAAAAAAg=</HashCode>
+      <FileName>Data\Models\ProductoAcabado\FichaNoConformidadProductoAcabado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.FichaNoConformidadServicio" Collapsed="true">
+    <Position X="33.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAQAAAAEAgAAAAAAAAAAAQAAAAAIAAQAYABAAg=</HashCode>
+      <FileName>Data\Models\Servicio\FichaNoConformidadServicio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.Empresa" Collapsed="true">
+    <Position X="67.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Models\Empresa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.Motivo" Collapsed="true">
+    <Position X="74.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Models\Motivo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaAnalisis" Collapsed="true">
+    <Position X="45.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAACAAAAABADAAAEAQAAAAAQEAAAAAA=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaAnalisis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaArticulo" Collapsed="true">
+    <Position X="47.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAgAAEAAAAACAgAAAgIABAAAQCAAAAAAAAAIAIAA=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaArticulo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaArticuloEFIMED" Collapsed="true">
+    <Position X="53.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAgAAEAAAAAAAAAAAAIABAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaArticuloEFIMED.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaCalidad" Collapsed="true">
+    <Position X="59.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAFAAAAAAEAAACAAAASAAAgAACAAAAAAgAQAAAA=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaCalidad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaCompras" Collapsed="true">
+    <Position X="31" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAIAIKAAAAAAADAAAAAAAAAAEAAAQAAAA=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaCompras.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaEjecucion" Collapsed="true">
+    <Position X="36.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAwAAAAAAEAAAEBAAAAAAAAAACAAAQAAAQ=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaEjecucion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaIncidencia" Collapsed="true">
+    <Position X="38.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgEAAEAAAAAAAAIAAQAgAAAAAAAAAAAAAAAJABAAA=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaIncidencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaLogistica" Collapsed="true">
+    <Position X="40.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAACEQAAIAAAAAAAAAgAAAAAAAQAAAA=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaLogistica.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaNoConformidad" Collapsed="true">
+    <Position X="43.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAIAEAAAAAAABAAAAAAAgAAIBCIAAAAQCAAAA=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaNoConformidad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.Models.TiposFicha.FichaPlanificacion" Collapsed="true">
+    <Position X="43" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAEAAAAAAAAAAAQAAAAAAIAEAAAAAIAAAAAAAQACgI=</HashCode>
+      <FileName>Data\Models\TiposFicha\FichaPlanificacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Area" Collapsed="true">
+    <Position X="65.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAIAAAAAAAAAAAgBAAAAAAAAACAAAAAAGAAAA=</HashCode>
+      <FileName>Data\Models\Area.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Articulo" Collapsed="true">
+    <Position X="72.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAACAAAAAABAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Data\Models\Articulo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Decision" Collapsed="true">
+    <Position X="67.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Models\Decision.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EmpresaAreaSeccionUsuario" Collapsed="true">
+    <Position X="69" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAAAEAAAAAAAAAAAAAAIgAAAACIAAEAQAAAAA=</HashCode>
+      <FileName>Data\Models\EmpresaAreaSeccionUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Incidencia" Collapsed="true">
+    <Position X="65.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAABAAAAAAAAAACAAACAAAA=</HashCode>
+      <FileName>Data\Models\Incidencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proveedor" Collapsed="true">
+    <Position X="72.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAACAAAAAABAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Data\Models\Proveedor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seccion" Collapsed="true">
+    <Position X="65.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAIAAACQCAAAA=</HashCode>
+      <FileName>Data\Models\Seccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TipoDecisionSeccion" Collapsed="true">
+    <Position X="74.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Models\TipoDecisionSeccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TipoIncidenciaSeccion" Collapsed="true">
+    <Position X="65.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Models\TipoIncidenciaSeccion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Usuario" Collapsed="true">
+    <Position X="70.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAICAAAAAAAAAAgAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Data\Models\Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.DbInitializer" Collapsed="true">
+    <Position X="65.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DbInitializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Data.ProkbContext" Collapsed="true">
+    <Position X="69" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAIAQCAIkBAAAAAAAAAAAAMAijAQBAgAgEACAQigA=</HashCode>
+      <FileName>Data\ProkbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Migrations.Initial" Collapsed="true">
+    <Position X="72.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAI=</HashCode>
+      <FileName>Migrations\20200331000203_Initial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Migrations.ProkbContextModelSnapshot" Collapsed="true">
+    <Position X="70.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Migrations\ProkbContextModelSnapshot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Repositories.AreasRepository" Collapsed="true">
+    <Position X="70.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\AreasRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Repositories.ArticulosRepository" Collapsed="true">
+    <Position X="77.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ArticulosRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Repositories.DecisionesRepository" Collapsed="true">
+    <Position X="70.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\DecisionesRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Repositories.DocumentosRepository" Collapsed="true">
+    <Position X="65.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\DocumentosRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Repositories.EmpresasRepository" Collapsed="true">
+    <Position X="77.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\EmpresasRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Repositories.IncidenciasRepository" Collapsed="true">
+    <Position X="70.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\IncidenciasRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Repositories.MotivosRepository" Collapsed="true">
+    <Position X="65.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\MotivosRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Repositories.ProveedoresRepository" Collapsed="true">
+    <Position X="76" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\ProveedoresRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Repositories.SeccionesRepository" Collapsed="true">
+    <Position X="69" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAABAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Repositories\SeccionesRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Program" Collapsed="true">
+    <Position X="67.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.Startup" Collapsed="true">
+    <Position X="72.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Prokb.WeatherForecast" Collapsed="true">
+    <Position X="76" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEAAA=</HashCode>
+      <FileName>WeatherForecast.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Prokb.Data.DataDTO.Enums.EstadoProductoAcabadoDTO" Collapsed="true">
+    <Position X="70.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAEAAAAAAAAAgAAAAIgA=</HashCode>
+      <FileName>Data\DataDTO\Enums\EstadoProductoAcabadoDTO.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Prokb.Data.Enums.EstadoServicio" Collapsed="true">
+    <Position X="72.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Data\Models\Enums\EstadoServicio.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Prokb.Data.DataDTO.Enums.EstadoEMEDTO" Collapsed="true">
+    <Position X="67.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAACAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\DataDTO\Enums\EstadoEMEDTO.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Prokb.Data.DataDTO.Enums.EstadoServicioDTO" Collapsed="true">
+    <Position X="74.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAAAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Data\DataDTO\Enums\EstadoServicioDTO.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Prokb.Data.Enums.EstadoEME" Collapsed="true">
+    <Position X="65.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QABAAAACAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Models\Enums\EstadoEME.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Prokb.Data.Enums.EstadoProductoAcabado" Collapsed="true">
+    <Position X="69" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAEAAAAAAAAAgAAAAIgA=</HashCode>
+      <FileName>Data\Models\Enums\EstadoProductoAcabado.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

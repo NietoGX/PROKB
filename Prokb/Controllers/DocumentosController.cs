@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Prokb.Data;
+using Prokb.Data.DataDTO;
 using Prokb.Data.Models;
+using Prokb.Repositories;
 
 namespace Prokb.Controllers
 {
@@ -14,97 +16,75 @@ namespace Prokb.Controllers
     [ApiController]
     public class DocumentosController : ControllerBase
     {
-        private readonly ProkbContext _context;
+        private  DocumentosRepository _repository;
 
-        public DocumentosController(ProkbContext context)
+        public DocumentosController(DocumentosRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/Documentos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Documento>>> GetDocumentos()
+        public ActionResult<IEnumerable<DocumentoDTO>> GetDocumentos()
         {
-            return await _context.Documentos.ToListAsync();
+            return Ok(_repository.GetAll());
         }
 
         // GET: api/Documentos/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Documento>> GetDocumento(int id)
-        {
-            var documento = await _context.Documentos.FindAsync(id);
-
-            if (documento == null)
-            {
-                return NotFound();
-            }
-
-            return documento;
-        }
+        //[HttpGet("{id}")]
+        //public  <ActionResult<Documento>> GetDocumento(int id)
+        //{
+        //    return Ok(_repository.Get(id));
+        //}
 
         // PUT: api/Documentos/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutDocumento(int id, Documento documento)
-        {
-            if (id != documento.Id)
-            {
-                return BadRequest();
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutDocumento(int id, Documento documento)
+        //{
+        //    if (id != documento.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(documento).State = EntityState.Modified;
+        //    _context.Entry(documento).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!DocumentoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!DocumentoExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/Documentos
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Documento>> PostDocumento(Documento documento)
+        public  ActionResult<DocumentoDTO> PostDocumento(DocumentoDTO documento)
         {
-            _context.Documentos.Add(documento);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetDocumento", new { id = documento.Id }, documento);
+            return Ok(_repository.Create(documento));
         }
 
         // DELETE: api/Documentos/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Documento>> DeleteDocumento(int id)
+        public ActionResult<Documento> DeleteDocumento(int id)
         {
-            var documento = await _context.Documentos.FindAsync(id);
-            if (documento == null)
-            {
-                return NotFound();
-            }
-
-            _context.Documentos.Remove(documento);
-            await _context.SaveChangesAsync();
-
-            return documento;
+            return Ok(_repository.Delete(id));
         }
 
-        private bool DocumentoExists(int id)
-        {
-            return _context.Documentos.Any(e => e.Id == id);
-        }
+        
     }
 }

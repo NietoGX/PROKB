@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 
 using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
+using System;
 
 namespace Prokb.Controllers
 {
@@ -28,7 +29,7 @@ namespace Prokb.Controllers
 
         // GET: api/Areas
         [HttpGet]
-        public ActionResult<List<AreaDTO>> GetAreas()
+        public ActionResult<IEnumerable<AreaDTO>> GetAreas()
         {
             return Ok(_repository.GetAll());
         }
@@ -78,8 +79,9 @@ namespace Prokb.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public ActionResult<AreaDTO> PostArea(AreaDTO area)
+        public ActionResult<AreaDTO> PostArea([FromBody]AreaDTO area)
         {
+            
             return Ok(_repository.Create(area));
         }
 

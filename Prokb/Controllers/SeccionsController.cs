@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Prokb.Data;
+using Prokb.Data.DataDTO;
+using Prokb.Repositories;
 
 namespace Prokb.Controllers
 {
@@ -13,97 +15,75 @@ namespace Prokb.Controllers
     [ApiController]
     public class SeccionsController : ControllerBase
     {
-        private readonly ProkbContext _context;
+        private SeccionesRepository _repository;
 
-        public SeccionsController(ProkbContext context)
+        public SeccionsController(SeccionesRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/Seccions
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Seccion>>> GetSecciones()
+        public ActionResult<IEnumerable<SeccionDTO>> GetSecciones()
         {
-            return await _context.Secciones.ToListAsync();
+            return Ok(_repository.GetAll());
         }
 
         // GET: api/Seccions/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Seccion>> GetSeccion(int id)
-        {
-            var seccion = await _context.Secciones.FindAsync(id);
-
-            if (seccion == null)
-            {
-                return NotFound();
-            }
-
-            return seccion;
-        }
+        //[HttpGet("{id}")]
+        //public ActionResult<SeccionDTO> GetSeccion(int id)
+        //{
+        //    return Ok(_repository.Get(id));
+        //}
 
         // PUT: api/Seccions/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutSeccion(int id, Seccion seccion)
-        {
-            if (id != seccion.Id)
-            {
-                return BadRequest();
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutSeccion(int id, Seccion seccion)
+        //{
+        //    if (id != seccion.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(seccion).State = EntityState.Modified;
+        //    _context.Entry(seccion).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SeccionExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!SeccionExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/Seccions
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Seccion>> PostSeccion(Seccion seccion)
+        public ActionResult<SeccionDTO> PostSeccion(SeccionDTO seccion)
         {
-            _context.Secciones.Add(seccion);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetSeccion", new { id = seccion.Id }, seccion);
+            return Ok(_repository.Create(seccion));
         }
 
         // DELETE: api/Seccions/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Seccion>> DeleteSeccion(int id)
         {
-            var seccion = await _context.Secciones.FindAsync(id);
-            if (seccion == null)
-            {
-                return NotFound();
-            }
-
-            _context.Secciones.Remove(seccion);
-            await _context.SaveChangesAsync();
-
-            return seccion;
+            return Ok(_repository.Delete(id));
         }
 
-        private bool SeccionExists(int id)
-        {
-            return _context.Secciones.Any(e => e.Id == id);
-        }
+        
     }
 }

@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Prokb.Data;
+using Prokb.Data.DataDTO;
+using Prokb.Repositories;
 
 namespace Prokb.Controllers
 {
@@ -13,97 +15,75 @@ namespace Prokb.Controllers
     [ApiController]
     public class DecisionsController : ControllerBase
     {
-        private readonly ProkbContext _context;
+        private  DecisionesRepository _repository;
 
-        public DecisionsController(ProkbContext context)
+        public DecisionsController(DecisionesRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
         // GET: api/Decisions
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Decision>>> GetDecisiones()
+        public ActionResult<IEnumerable<DecisionDTO>> GetDecisiones()
         {
-            return await _context.Decisiones.ToListAsync();
+            return Ok(_repository.GetAll());
         }
 
         // GET: api/Decisions/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Decision>> GetDecision(int id)
-        {
-            var decision = await _context.Decisiones.FindAsync(id);
-
-            if (decision == null)
-            {
-                return NotFound();
-            }
-
-            return decision;
-        }
+        //[HttpGet("{id}")]
+        //public <ActionResult<DecisionDTO> GetDecision(int id)
+        //{
+        //    return Ok(_repository.Get(id));
+        //}
 
         // PUT: api/Decisions/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutDecision(int id, Decision decision)
-        {
-            if (id != decision.Id)
-            {
-                return BadRequest();
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutDecision(int id, Decision decision)
+        //{
+        //    if (id != decision.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(decision).State = EntityState.Modified;
+        //    _context.Entry(decision).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!DecisionExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!DecisionExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/Decisions
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Decision>> PostDecision(Decision decision)
+        public ActionResult<Decision> PostDecision(DecisionDTO decision)
         {
-            _context.Decisiones.Add(decision);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetDecision", new { id = decision.Id }, decision);
+            return Ok(_repository.Create(decision));
         }
 
         // DELETE: api/Decisions/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Decision>> DeleteDecision(int id)
+        public  ActionResult<Decision> DeleteDecision(int id)
         {
-            var decision = await _context.Decisiones.FindAsync(id);
-            if (decision == null)
-            {
-                return NotFound();
-            }
-
-            _context.Decisiones.Remove(decision);
-            await _context.SaveChangesAsync();
-
-            return decision;
+            return Ok(_repository.Delete(id));
         }
 
-        private bool DecisionExists(int id)
-        {
-            return _context.Decisiones.Any(e => e.Id == id);
-        }
+        
     }
 }

@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Prokb.Data;
+using Prokb.Data.DataDTO;
 using Prokb.Data.Models;
+using Prokb.Repositories;
 
 namespace Prokb.Controllers
 {
@@ -14,97 +16,79 @@ namespace Prokb.Controllers
     [ApiController]
     public class MotivoesController : ControllerBase
     {
-        private readonly ProkbContext _context;
+        private MotivosRepository _repository;
 
-        public MotivoesController(ProkbContext context)
+        public MotivoesController(MotivosRepository repository)
         {
-            _context = context;
+            _repository = repository;
         }
 
-        // GET: api/Motivoes
+        //GET: api/Motivoes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Motivo>>> GetMotivos()
+        public ActionResult<IEnumerable<Motivo>> GetMotivos()
         {
-            return await _context.Motivos.ToListAsync();
+
+            return Ok(_repository.GetAll());
         }
 
         // GET: api/Motivoes/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Motivo>> GetMotivo(int id)
-        {
-            var motivo = await _context.Motivos.FindAsync(id);
-
-            if (motivo == null)
-            {
-                return NotFound();
-            }
-
-            return motivo;
-        }
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<MotivoDTO>> GetMotivo(int id)
+        //{
+        //    return Ok(_repository.Get(id));
+        //}
 
         // PUT: api/Motivoes/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutMotivo(int id, Motivo motivo)
-        {
-            if (id != motivo.Id)
-            {
-                return BadRequest();
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutMotivo(int id, Motivo motivo)
+        //{
+        //    if (id != motivo.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(motivo).State = EntityState.Modified;
+        //    _context.Entry(motivo).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MotivoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!MotivoExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/Motivoes
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Motivo>> PostMotivo(Motivo motivo)
+        public ActionResult<MotivoDTO> PostMotivo(MotivoDTO motivo)
         {
-            _context.Motivos.Add(motivo);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetMotivo", new { id = motivo.Id }, motivo);
+            return Ok(_repository.Create(motivo));
         }
 
         // DELETE: api/Motivoes/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Motivo>> DeleteMotivo(int id)
+        public ActionResult<Motivo> DeleteMotivo(int id)
         {
-            var motivo = await _context.Motivos.FindAsync(id);
-            if (motivo == null)
-            {
-                return NotFound();
-            }
-
-            _context.Motivos.Remove(motivo);
-            await _context.SaveChangesAsync();
-
-            return motivo;
+            return Ok(_repository.Delete(id));
         }
 
-        private bool MotivoExists(int id)
-        {
-            return _context.Motivos.Any(e => e.Id == id);
-        }
+        //private bool MotivoExists(int id)
+        //{
+        //    return _context.Motivos.Any(e => e.Id == id);
+        //}
     }
 }

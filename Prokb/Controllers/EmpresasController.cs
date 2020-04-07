@@ -14,9 +14,9 @@ namespace Prokb.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class EmpresasController : ControllerBase
+    public class EmpresasController : Controller
     {
-        private readonly ProkbContext _context;
+        
         private EmpresasRepository _repository;
 
         public EmpresasController(EmpresasRepository repository)
@@ -25,63 +25,53 @@ namespace Prokb.Controllers
         }
 
 
-        public EmpresasController(ProkbContext context)
-        {
-            _context = context;
-        }
+        
 
         // GET: api/Empresas
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Empresa>>> GetEmpresas()
+        public ActionResult<IEnumerable<EmpresaDTO>> GetEmpresas()
         {
-            return await _context.Empresas.ToListAsync();
+            return Ok(_repository.GetAll());
         }
 
-        // GET: api/Empresas/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Empresa>> GetEmpresa(int id)
-        {
-            var empresa = await _context.Empresas.FindAsync(id);
-
-            if (empresa == null)
-            {
-                return NotFound();
-            }
-
-            return empresa;
-        }
+        //// GET: api/Empresas/5
+        //[HttpGet("{id}")]
+        //public async Task<ActionResult<Empresa>> GetEmpresa(int id)
+        //{
+        //    return await Ok(_repository.Get(id)); 
+        //}
 
         // PUT: api/Empresas/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutEmpresa(int id, Empresa empresa)
-        {
-            if (id != empresa.Id)
-            {
-                return BadRequest();
-            }
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> PutEmpresa(int id, Empresa empresa)
+        //{
+        //    if (id != empresa.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(empresa).State = EntityState.Modified;
+        //    _context.Entry(empresa).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!EmpresaExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!EmpresaExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
 
         // POST: api/Empresas
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
@@ -89,31 +79,17 @@ namespace Prokb.Controllers
         [HttpPost]
         public ActionResult<EmpresaDTO> Create([FromBody]EmpresaDTO dto)
         {
-            //_context.Empresas.Add(empresa);
-            //await _context.SaveChangesAsync();
 
             return Ok(_repository.Create(dto));
         }
 
         // DELETE: api/Empresas/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Empresa>> DeleteEmpresa(int id)
+        public ActionResult<EmpresaDTO> DeleteEmpresa(int id)
         {
-            var empresa = await _context.Empresas.FindAsync(id);
-            if (empresa == null)
-            {
-                return NotFound();
-            }
-
-            _context.Empresas.Remove(empresa);
-            await _context.SaveChangesAsync();
-
-            return empresa;
+            return Ok(_repository.Delete(id));
         }
 
-        private bool EmpresaExists(int id)
-        {
-            return _context.Empresas.Any(e => e.Id == id);
-        }
+        
     }
 }
