@@ -79,7 +79,7 @@ namespace Prokb.Controllers
 
         // DELETE: api/Seccions/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Seccion>> DeleteSeccion(int id)
+        public ActionResult<Seccion> DeleteSeccion(int id)
         {
             return Ok(_repository.Delete(id));
         }

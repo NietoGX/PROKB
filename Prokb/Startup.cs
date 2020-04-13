@@ -17,23 +17,35 @@ using System.Threading.Tasks;
 using Prokb.Data;
 using AutoMapper;
 using Microsoft.Extensions.Hosting;
+using Prokb.Helpers;
+using Prokb.Registers;
 
 namespace Prokb
 {
     public class Startup
     {
+        private IConfiguration _configuration;
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
 
         }
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
         {
-            
-
+            services.AddCors();
+            services.AddControllers();
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
             services.AddDbContext<ProkbContext>(options =>
               options.UseSqlServer(Configuration.GetConnectionString("ProkbContext")));
+
+            services.addAuthenticationRegisters(_configuration);
+
 
         }
 
@@ -48,9 +60,17 @@ namespace Prokb
 
             app.UseRouting();
 
-           
+            app.UseAuthorization();
 
-            
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+
+
+
+
+
         }
     }
 

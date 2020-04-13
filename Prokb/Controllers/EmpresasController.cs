@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿
+
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Prokb.Data;
 using Prokb.Data.DataDTO;
-using Prokb.Data.Models;
 using Prokb.Repositories;
+using System.Collections.Generic;
 
 namespace Prokb.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
-    [ApiController]
-    public class EmpresasController : Controller
+    public class EmpresasController : ControllerBase
     {
         
         private EmpresasRepository _repository;
@@ -29,10 +25,14 @@ namespace Prokb.Controllers
 
         // GET: api/Empresas
         [HttpGet]
-        public ActionResult<IEnumerable<EmpresaDTO>> GetEmpresas()
+        public string Get(int id)
         {
-            return Ok(_repository.GetAll());
+            return "value";
         }
+        //public ActionResult<IEnumerable<EmpresaDTO>> GetEmpresas()
+        //{
+        //    return Ok(_repository.GetAll());
+        //}
 
         //// GET: api/Empresas/5
         //[HttpGet("{id}")]

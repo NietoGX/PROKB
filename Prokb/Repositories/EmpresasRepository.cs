@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿
+
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Prokb.Data;
 using Prokb.Data.DataDTO;
@@ -6,15 +8,20 @@ using Prokb.Data.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Prokb.Repositories
 {
     public class EmpresasRepository
     {
         private ProkbContext _context;
-        private readonly IMapper _mapper;
+        private IMapper _mapper;
         
+        public EmpresasRepository(ProkbContext context, IMapper mapper)
+        {
+            _context = context;
+            _mapper = mapper;
+        }
+
         public EmpresaDTO Create(EmpresaDTO dto)
         {
             // Mapeamos el dto a la entidad, la añadimos al contexto, guardamos y devolvemos el dto mapeado
